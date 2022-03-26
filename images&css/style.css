@@ -47,7 +47,7 @@ a {
 .contact {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
 }
 ul li:hover {
     transform: scale(1.1);
@@ -58,7 +58,7 @@ ul li:hover {
 }
 .intro {
     justify-content: flex-start;
-    height: 30em;
+    height: 35em;
 }
 .intro h1 {
     font-size: 3rem;
@@ -84,12 +84,14 @@ section {
     font-family: Poppins;
     color: #FFFDFA;
 }
-.projects .description {
+.projects description {
     flex-direction: column;
     align-items: flex-start;
 }
 .projects .project{
-    height: 26em;
+    height: 30em;
+    width: 80%;
+    justify-content: space-between;
 }
 .projects img {
     width: 35em;
@@ -97,8 +99,9 @@ section {
 .projects h4 {
     font-size: 3rem;
 }
-
-
 .los-pollos {
     background-color: rgb(245, 210, 216);
+}
+.koko {
+    
 }
