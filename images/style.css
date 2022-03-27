@@ -89,7 +89,7 @@ section {
 }
 .projects .project{
     height: 30em;
-    width: 80%;
+    width: 75%;
     justify-content: space-between;
 }
 .projects img {
@@ -101,6 +101,33 @@ section {
 .los-pollos {
     background-color: rgb(245, 210, 216);
 }
-.koko {
-    
+#skills {
+    margin: 0 10%;
+}
+#skills h2 {
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+.skill {
+    justify-content: flex-start;
+    margin: 2em 0.5em;
+}
+.skill i {
+    margin-right: 1em;
+}
+.skill p {
+    font-size: 1.9rem;
+}
+.dot {
+    opacity: 0;
+    animation: showHideDot 2.5s ease-in-out infinite;
+}
+.one { animation-delay: 0.2s; }
+.two { animation-delay: 0.4s; }
+.three { animation-delay: 0.6s; }
+  @keyframes showHideDot {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 0; }
 }
