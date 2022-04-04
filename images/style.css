@@ -1,6 +1,21 @@
 html {
     font-size: 16px;
 }
+@media only screen and (max-width: 930px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 610px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 465px) {
+    html {
+        font-size: 11px;
+    }
+}
 * {
     box-sizing: border-box;
     font-family: Inter;
@@ -40,6 +55,49 @@ ul li {
     padding: 5px;
     margin-right: 1em;
 }
+.hamburger {
+    display: none;
+}
+.menu {
+    position: fixed;
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #FFFDFA;
+    list-style: none;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.menu ul {
+    max-height: 50em;
+}
+.menu a {
+    color: black;
+    font-size: 2rem;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+.showMenu {
+    transform: translateY(0);
+}
+@media only screen and (max-width: 610px) {
+    ul {
+        display: none;
+    }
+    .contact a {
+        display: none;
+    }
+    .hamburger {
+        display: inline-block;
+    }
+}
 a {
     color: black;
     text-decoration: none;
@@ -54,13 +112,27 @@ ul li:hover {
     transition: 0.3s;
 }
 .opening {
-    flex-wrap: wrap;
     height: 35em;
     justify-content: space-between;
 }
 .opening img {
     width: 15em;
     cursor: pointer;
+    z-index: 0;
+}
+.opening img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+@media only screen and (max-width: 1180px)  {
+    .opening {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .opening img {
+        margin: 4em 0;
+    }       
 }
 .container {
     margin: 0 10%;
@@ -73,10 +145,6 @@ ul li:hover {
     color: rgb(110, 110, 110);
 }
 .highlight {
-    color: black;
-}
-.kuku {
-    display: none;
     color: black;
 }
 section {
@@ -95,13 +163,14 @@ section {
     font-size: 9rem;
     font-family: Poppins;
     color: #FFFDFA;
+    margin: 0 2em;
 }
 .projects description {
     flex-direction: column;
     align-items: flex-start;
+    margin: 12em 0;
 }
 .projects .project{
-    height: 30em;
     width: 75%;
     justify-content: space-between;
 }
@@ -112,7 +181,24 @@ section {
     font-size: 3rem;
 }
 .los-pollos {
-    background-color: rgb(245, 210, 216);
+    background-color: rgb(253, 156, 173);
+    color: white;
+}
+.los-pollos a {
+    color: white;
+}
+@media only screen and (max-width: 1150px) {
+    .projects .project {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .projects description {
+        margin: 3em;
+        align-items: center;
+    }
+    .projects img {
+        margin-bottom: 3em;
+    }
 }
 #skills h2 {
     font-size: 3.8rem;
@@ -151,3 +237,28 @@ section {
       text-shadow:
         .25em 0 0 rgb(0, 0, 0),
         .5em 0 0 rgb(0, 0, 0);}}
+@media only screen and (max-width: 820px) {
+    .skill p {
+        display: none;
+    }
+    .skill {
+        margin: 3em 0.5em;
+        justify-content: center;
+        
+    }
+    #skills h2 {
+        text-align: center;
+    }
+}
+.contact1 h1 {
+    color: black;
+    margin-top: 2em;
+}
+.contact2 p {
+    font-size: 20px;
+}
+.contact2 i {
+    margin-top: 1.5em;
+    margin-right: 0.5em;
+    color: rgb(54, 54, 54);
+}
