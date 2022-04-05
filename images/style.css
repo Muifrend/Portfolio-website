@@ -81,11 +81,19 @@ ul li {
     color: black;
     font-size: 2rem;
 }
-.menu a:hover {
-    text-decoration: underline;
+.menu li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.menu i {
+    cursor: pointer;
 }
 .showMenu {
     transform: translateY(0);
+}
+.contact a:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 @media only screen and (max-width: 610px) {
     ul {
@@ -261,4 +269,8 @@ section {
     margin-top: 1.5em;
     margin-right: 0.5em;
     color: rgb(54, 54, 54);
+}
+.contact2 i:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
